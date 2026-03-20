@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ThermoConvert</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <main class="container">
+
+    <header class="header">
+      <div class="logo">⬡ THERMO</div>
+      <p class="tagline">Convert temperatures instantly</p>
+    </header>
+
+    <div class="card">
+
+      <div class="card-label">INPUT</div>
+
+      <div class="input-group">
+        <input
+          type="number"
+          id="tempInput"
+          class="temp-input"
+          placeholder="0"
+          autocomplete="off"
+        />
+        <div class="unit-badge" id="unitBadge">°C</div>
+      </div>
+      <div class="error-msg" id="errorMsg">Please enter a valid number</div>
+
+      <div class="radio-group">
+        <label class="radio-pill">
+          <input type="radio" name="unit" value="C" checked />
+          <span>Celsius</span>
+        </label>
+        <label class="radio-pill">
+          <input type="radio" name="unit" value="F" />
+          <span>Fahrenheit</span>
+        </label>
+        <label class="radio-pill">
+          <input type="radio" name="unit" value="K" />
+          <span>Kelvin</span>
+        </label>
+      </div>
+
+      <button class="convert-btn" id="convertBtn">
+        <span class="btn-text">Convert</span>
+        <span class="btn-icon">→</span>
+      </button>
+
+      <div class="results" id="results">
+        <div class="result-item" id="res1">
+          <span class="res-label">—</span>
+          <span class="res-value">—</span>
+        </div>
+        <div class="result-item" id="res2">
+          <span class="res-label">—</span>
+          <span class="res-value">—</span>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <span>C → F → K</span>
+      <span>· All scales supported ·</span>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
